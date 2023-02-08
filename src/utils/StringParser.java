@@ -1,7 +1,9 @@
 package utils;
 
+/**
+ * Class to check if the inputs are correct
+ */
 public class StringParser {
-
 
     public static boolean checkInputUser(String input){
         String inputUserRegex = "^[1-3]";

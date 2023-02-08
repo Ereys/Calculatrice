@@ -2,11 +2,14 @@ package models;
 
 import java.util.ArrayList;
 
-public class Calculatrice {
+/**
+ * This class represent the calculator with a list of operation
+ */
+public class Calculator {
 
     private ArrayList<Calcul> historyCalcul;
 
-    public Calculatrice(){
+    public Calculator(){
         this.historyCalcul = new ArrayList<Calcul>();
     }
 

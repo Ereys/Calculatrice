@@ -1,25 +1,17 @@
-import models.Calculatrice;
+import models.Calculator;
 import utils.StringParser;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import static utils.StringParser.checkInputUser;
-
 public class Main {
     public static void main(String[] args) throws Exception{
 
-        Calculatrice calculette = new Calculatrice();
-
+        Calculator calculette = new Calculator();
         BufferedReader scanf = new BufferedReader(new InputStreamReader(System.in));
         double a, b;
         String op;
         String chose;
-
-        String inputUserRegex = "^[1-3]";
-        String operatorRegex = "^[+,-,*,/]";
-
-
 
         do{
             try {
@@ -39,8 +31,8 @@ public class Main {
                 continue;
             }
 
-            System.out.print("Chose between 1(Calcul), 2(Display History), 3(Quit) : ");
             try {
+                System.out.print("Chose between 1(Calcul), 2(Display History), 3(Quit) : ");
                 chose = scanf.readLine();
                 StringParser.checkInputUser(chose);
             }catch (Exception e){

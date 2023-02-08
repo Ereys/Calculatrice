@@ -1,5 +1,9 @@
 package models;
 
+
+/**
+ * Class which represent a calcul in the format : value1 operation value2 = result, ex: 12 + 8 = 20
+ */
 public class Calcul {
 
     private double value1;
