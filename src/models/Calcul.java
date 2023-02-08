@@ -27,7 +27,7 @@ public class Calcul {
     }
     public void div(){
         if(this.value2==0){
-            throw new ArithmeticException();
+            throw new ArithmeticException("Cannot divide by 0");
         }
         this.result = value1 / value2;
     }

@@ -20,6 +20,7 @@ public class Main {
         String operatorRegex = "^[+,-,*,/]";
 
 
+
         do{
             try {
                 System.out.print("a = ");
