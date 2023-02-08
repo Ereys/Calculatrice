@@ -1,7 +1,10 @@
 import models.Calculatrice;
+import utils.StringParser;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+
+import static utils.StringParser.checkInputUser;
 
 public class Main {
     public static void main(String[] args) throws Exception{
@@ -24,24 +27,23 @@ public class Main {
 
                 System.out.print("Chose between [+,-,*,/] :");
                 op = scanf.readLine();
-                if(!op.matches(operatorRegex)){
-                    throw new IllegalArgumentException();
-                }
+                StringParser.checkOperator(op);
 
                 System.out.print("b = ");
                 b = Double.parseDouble(scanf.readLine());
 
                 calculette.addCalculToHistoryList(a, b, op);
             }catch(Exception e){
-                System.out.println("Error : Illegal caracters");
+                System.out.println("Error: " + e.getMessage());
                 continue;
             }
 
             System.out.print("Chose between 1(Calcul), 2(Display History), 3(Quit) : ");
-            chose = scanf.readLine();
-
-            if(!chose.matches(inputUserRegex)){
-                System.out.println("Error: Illegal caracter, chose between 1,2 or 3");
+            try {
+                chose = scanf.readLine();
+                StringParser.checkInputUser(chose);
+            }catch (Exception e){
+                System.out.println(e.getMessage());
                 continue;
             }
 
