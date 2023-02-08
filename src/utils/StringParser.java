@@ -16,7 +16,7 @@ public class StringParser {
     }
 
     public static boolean checkOperator(String operator){
-        String operatorRegex = "^[+,-,*,/]";
+        String operatorRegex = "^[+,[-],*,/]";
         if(operator.matches(operatorRegex)){
             return true;
         }else{
